@@ -1,0 +1,28 @@
+<div style="display: flex;">
+
+
+
+  <div style="width: 100%;" class="shadow">
+    <div style="display: flex;">
+      <div>
+        <input type="date" class="date" [(ngModel)]="searchValue.sDate" max="{{searchValue.eDate}}" (change)="search()">
+      </div>
+
+      <div>
+        <input type="date" class="date" [(ngModel)]="searchValue.eDate" min="{{searchValue.sDate}}" (change)="search()">
+      </div>
+      <br>
+    </div>
+
+    <div style="display: flex;" class="shadow">
+
+      <div style="width: 100%;">
+        <!-- <mat-icon>search</mat-icon> -->
+        <input type="text" [(ngModel)]="searchValue.name" placeholder="搜索..."
+          (keyup)="search()">
+      </div>
+    </div>
+
+  </div>
+
+</div>
